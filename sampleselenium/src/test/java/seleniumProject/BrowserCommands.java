@@ -20,7 +20,8 @@ public class BrowserCommands {
 		System.out.println(url);            // to print the url in Console
 		String pagesource = driver.getPageSource();// to get the page source of opened page
 		System.out.println(pagesource);    // to print the page source of opened page
-		
+		String handleId=driver.getWindowHandle();
+		System.out.println(handleId);  //
 	}
 
 	public static void main(String[] args) {
