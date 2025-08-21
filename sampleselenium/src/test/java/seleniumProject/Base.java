@@ -14,6 +14,7 @@ public class Base {
 		//driver = new FirefoxDriver(); // if your class is Firefox
 		
 		driver.get("https://selenium.qabible.in/index.php"); // the link to test the given site is given in driver.get
+	//driver.get("https://www.google.com/"); 
 		driver.manage().window().maximize(); // to get Chrome in full screen
 
 	}

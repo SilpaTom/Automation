@@ -1,5 +1,9 @@
 package seleniumProject;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -36,6 +40,20 @@ public class HandlingActions extends Base {
 	action.dragAndDrop(drag,drop).build().perform();
 	}
 	
+	 // keyboard actions. Robot class is used. robot class is provide by Java AWT package. it is not provided by 
+	 //selenium , java is providing this
+	 
+	 public void verifyKeyboardActions() throws AWTException
+	{
+	Robot key=new Robot();
+	// Cntl+ T new tab
+	key.keyPress(KeyEvent.VK_CONTROL); //VK- virtual key . to press control key
+	key.keyPress(KeyEvent.VK_T);// to press T alphabet key
+	key.keyRelease(KeyEvent.VK_CONTROL);// releasing control key
+	key.keyRelease(KeyEvent.VK_T);///releasing T key
+
+	}
+	
   
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -43,7 +61,14 @@ public class HandlingActions extends Base {
 		actions.browserInitializer();
 	//	actions.verifyRightClick();
 		//actions.verifyMouseHover();
-		actions.verifyDragDrop();
+	//	actions.verifyDragDrop();
+		try {
+			actions.verifyKeyboardActions();
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
+	
 }
