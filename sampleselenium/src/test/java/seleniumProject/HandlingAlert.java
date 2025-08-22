@@ -14,9 +14,9 @@ public class HandlingAlert extends Base{
 		driver.navigate().to("https://demoqa.com/alerts");
 		WebElement clickme1_button= driver.findElement(By.xpath("//button[@id='alertButton']"));
 		clickme1_button.click();
-		Alert simplealert=driver.switchTo().alert(); // Alert interface
+		Alert simplealert=driver.switchTo().alert(); // Switch to alert
 		System.out.println(simplealert.getText());
-		simplealert.accept();//to click the ok button in the alert meassage
+		simplealert.accept();//to click the ok button in the alert message
 		
 	}
 	
@@ -30,7 +30,7 @@ public class HandlingAlert extends Base{
 		confirmalert.dismiss();// to click the cancel button in alert
 	}
 
-	//	// prompt alert
+	// prompt alert
 	public void verifyPromptAlert() {
 		driver.navigate().to("https://demoqa.com/alerts");
 		WebElement clickme3_button= driver.findElement(By.xpath("//button[@id='promtButton']"));

@@ -7,8 +7,7 @@ public class Locators extends Base {
 	public void locate() {
 		//WebElement is the interface in Selenium that represents an HTML element on a web page. 
 		
-		driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");	//driver is object which is user defined
-		
+		driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");	//driver is object which is user defined 		
 		WebElement id = driver.findElement(By.id("single-input-field")); //WebElement is a class to locate the object id using findElement method
 		WebElement element1 = driver.findElement(By.className("my-2")); //Located the control using class name 
 		WebElement element2 = driver.findElement(By.name("viewport")); //Located the control using name
@@ -26,7 +25,7 @@ public class Locators extends Base {
 		
 		//Method by Combination of and or
 		WebElement element11 = driver.findElement(By.xpath("//button[@type='button' and @id='button-one']"));
-		WebElement element12 = driver.findElement(By.xpath("//button[@type='button' or @id='button-one']"));
+		WebElement element12 = driver.findElement(By.xpath("//button[@type='button' or @id='button-one']"));//situation- button toggling with two texts 
 		
 		//XPath Access Methods
 		WebElement element13 = driver.findElement(By.xpath("//div[contains(text(),'Single Input Field')]//parent::div[@class='card']")); //Identify the parent as "Parent of Child"
