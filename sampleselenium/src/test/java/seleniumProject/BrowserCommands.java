@@ -3,8 +3,8 @@ package seleniumProject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class BrowserCommands {
-	public WebDriver driver;
+public class BrowserCommands extends Base{
+	
 	
 	public void browserInitializer() {
 		driver = new ChromeDriver();

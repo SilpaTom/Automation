@@ -40,7 +40,8 @@ public class FileUpload extends Base{
 		robot.keyPress (KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_V);
-	
+		robot.keyPress (KeyEvent.VK_ENTER);
+		robot.keyRelease (KeyEvent.VK_ENTER);
 		
 	}
 	public static void main(String[] args) {

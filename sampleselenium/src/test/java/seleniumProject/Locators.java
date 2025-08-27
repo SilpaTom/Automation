@@ -11,6 +11,7 @@ public class Locators extends Base {
 		WebElement id = driver.findElement(By.id("single-input-field")); //WebElement is a class to locate the object id using findElement method
 		WebElement element1 = driver.findElement(By.className("my-2")); //Located the control using class name 
 		WebElement element2 = driver.findElement(By.name("viewport")); //Located the control using name
+		
 		WebElement element3 = driver.findElement(By.linkText("Ajax Form Submit")); //Located the control using link text
 		WebElement element4 = driver.findElement(By.partialLinkText("Ajax Form"));  //Located the control using partial link text
 		WebElement element5 = driver.findElement(By.xpath("/html/body/section/div/div/div[2]/div[1]/div/div[2]/form/div[1]/label")); //Located the control using Absolute XPath which is not recommended usually
@@ -27,10 +28,9 @@ public class Locators extends Base {
 		WebElement element11 = driver.findElement(By.xpath("//button[@type='button' and @id='button-one']"));
 		WebElement element12 = driver.findElement(By.xpath("//button[@type='button' or @id='button-one']"));//situation- button toggling with two texts 
 		
-		//XPath Access Methods
+		//XPath Axes Methods
 		WebElement element13 = driver.findElement(By.xpath("//div[contains(text(),'Single Input Field')]//parent::div[@class='card']")); //Identify the parent as "Parent of Child"
 		WebElement element14 = driver.findElement(By.xpath("//div[@class='card']//child::button[@id='button-one']")); //Identify the child as "Child of Parent"
-		
 		WebElement element15 = driver.findElement(By.xpath("//button[@id='button-one']//following::div[@class='card']")); //Identify the following node
 		WebElement element16 = driver.findElement(By.xpath("//button[@id='button-one']//preceding:: div[@class='card']")); //Identify the preceding node
 		WebElement element17 = driver.findElement(By.xpath("//div/ancestor::div[@class='card']")); //Identify the node from ancestor - eg: You are the granddaughter of ABC

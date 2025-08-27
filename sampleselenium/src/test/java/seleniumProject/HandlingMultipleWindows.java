@@ -14,7 +14,7 @@ public class HandlingMultipleWindows extends Base {
 	String firstHandleId=	driver.getWindowHandle();
 	WebElement handle1=driver.findElement(By.xpath("//a[text()='Click Here']"));
 	handle1.click();
-	Set<String> handleIds= driver.getWindowHandles(); // to get multiple hanle ids
+	Set<String> handleIds= driver.getWindowHandles(); // Handle id are unique, so we can use set
 	System.out.println(handleIds);
 	
 	Iterator<String>values=handleIds.iterator();

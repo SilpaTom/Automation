@@ -26,7 +26,9 @@ public class HandlingActions extends Base {
   WebElement mouseHover=driver.findElement(By.xpath("//a[contains(text(),'Input Form')]"));
     Actions action=new Actions(driver);
     action.moveToElement(mouseHover).build().perform();// moveToElement - method to simulate mouse hover action
-		
+	//build() → Combines multiple actions into one sequence.
+
+//perform() → Executes them.
 	}
 
 	 public void verifyDragDrop()
